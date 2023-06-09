@@ -259,7 +259,7 @@
     border-radius: 1.625rem;
    }
    
-   .learn-more .circle .icon {
+   .learn-more .circle .icont {
     transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     position: absolute;
     top: 0;
@@ -268,7 +268,7 @@
     background: #fff;
    }
    
-   .learn-more .circle .icon.arrow {
+   .learn-more .circle .icont.arrow {
     transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     left: 0.625rem;
     width: 1.125rem;
@@ -276,7 +276,7 @@
     background: none;
    }
    
-   .learn-more .circle .icon.arrow::before {
+   .learn-more .circle .icont.arrow::before {
     position: absolute;
     content: "";
     top: -0.29rem;
@@ -308,7 +308,7 @@
     width: 100%;
    }
    
-   .learn-more:hover .circle .icon.arrow {
+   .learn-more:hover .circle .icont.arrow {
     background: #fff;
     transform: translate(1rem, 0);
    }
@@ -492,7 +492,7 @@
        gap: 5px;
    }
 
-   .icon {
+   .icont {
        width: 20px;
        position: absolute;
        z-index: 99;
