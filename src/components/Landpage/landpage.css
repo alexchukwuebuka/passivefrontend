@@ -1,0 +1,215 @@
+.landpage{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.692);
+    background-position: bottom;
+    position: relative;
+    padding-bottom: 100px;
+}
+.landpage-content-wrapper{
+  position: relative;
+}
+.bg-svg{
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 100%;
+}
+.emphasy{
+  font-size: 2.5rem;
+  color: var(--color-variant);
+  display: block;
+  text-transform: capitalize;
+  font-family:'Poppins';
+}
+.landpage-content-wrapper{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 70px;
+    margin: auto;
+}
+.landpage-text-container{
+    width: 50%;
+    align-self: flex-start;
+    text-align: left;
+    padding-left: 20px;
+}
+.landpage-text-container h1{
+    color:var(--primary-color);
+}
+
+.landpage-text-container p{
+    color: var(--mild-color);
+    margin-top: 20px;
+}
+.landpage-img-container{
+    width: 45%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.deactivate-card {
+  overflow: hidden;
+  position: relative;
+  background-color: #ffffff;
+  text-align: left;
+  border-radius: 0.5rem;
+  max-width: 290px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.deactivate-card .header {
+  padding: 1.25rem 1rem 1rem 1rem;
+  background-color: #ffffff;
+}
+
+.deactivate-card .image {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #FEE2E2;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999px;
+}
+
+.deactivate-card .image svg {
+  color: #DC2626;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.deactivate-card .content {
+  margin-top: 0.75rem;
+  text-align: center;
+}
+
+.deactivate-card .title {
+  color: #111827;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+
+.deactivate-card .message {
+  margin-top: 0.5rem;
+  color: #6B7280;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.deactivate-card .actions {
+  margin: 0.75rem 1rem;
+  background-color: #F9FAFB;
+}
+
+.deactivate-card .desactivate {
+  display: inline-flex;
+  padding: 0.5rem 1rem;
+  background-color: #DC2626;
+  color: #ffffff;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  justify-content: center;
+  width: 100%;
+  border-radius: 0.375rem;
+  border-width: 1px;
+  border-color: transparent;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.deactivate-card .cancel {
+  display: inline-flex;
+  margin-top: 0.75rem;
+  padding: 0.5rem 1rem;
+  background-color: #ffffff;
+  color: #374151;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  justify-content: center;
+  width: 100%;
+  border-radius: 0.375rem;
+  border: 1px solid #D1D5DB;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+@media (max-width: 990px) and (min-width: 768px){
+
+  .landpage{
+      justify-content: center;
+      background-position: center;
+      background-color: rgba(0, 0, 0, 0.686);
+  }
+    .landpage-content-wrapper{
+      flex-direction: column-reverse;
+      justify-content: center;
+      padding: 20px 0px;
+    }
+    .landpage-text-container{
+      text-align: center;
+      width: 95%;
+      align-self: center;
+      padding-left: 0px;
+      text-align: left;
+    }
+    .launch-btn{
+      margin: 30px 0px;
+      align-self: flex-start;
+    }
+    .landpage-img-container{
+      margin-bottom: 50px;
+      width: 90%;
+    }
+    .floating-container-img3{
+      right: 10px;
+    }
+}
+@media screen and (max-width: 767px){
+  .landpage{
+    justify-content: center;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.692);
+}
+  .landpage-content-wrapper{
+    flex-direction: column-reverse;
+    justify-content: center;
+    width: 100%;
+    padding-top: 50px;
+  }
+  .landpage-text-container{
+    text-align: center;
+    width: 85%;
+    align-self: center;
+    padding-left: 0px;
+    text-align: left;
+  }
+  .landpage-text-container p{
+    margin: 30px 0px;
+    line-height: 22px;
+  }
+  .landpage-text-container h1{
+    font-weight: 600;
+    font-size: 1.7rem;
+    color: white;
+    font-family: 'Segoe UI','Poppins','Roboto' Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .launch-btn{
+    margin: 40px 0px 0px 0px;
+  }
+  .emphasy{
+    font-size: 1.8rem;
+    font-family: 'Segoe UI','Poppins','Roboto' Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .bg-svg{
+    display: none;
+  }
+}
