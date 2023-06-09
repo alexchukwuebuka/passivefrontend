@@ -101,7 +101,7 @@ function App() {
               title: `An Investor from ${myArray[Math.floor(Math.random() * num)].country} just withdrew ${myArray[Math.floor(Math.random() * num)].amount}...`
             })
     }, 600000);
-    const route = ''
+    const route = 'https://giddy-teal-flannel-shirt.cyclic.app'
   return (
     <>
     <AnimatePresence exitBeforeEnter>
