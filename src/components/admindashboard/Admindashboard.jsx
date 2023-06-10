@@ -147,7 +147,7 @@ const Admindashboard = ({ route }) => {
   const upgradeUser = async () => {
 
     setLoader(true)
-    const req = await fetch(`${route}/api/fundwallet`,
+    const req = await fetch(`${route}/api/updateUser`,
     {
       method:'POST',
       headers: {
@@ -162,7 +162,7 @@ const Admindashboard = ({ route }) => {
     if (res.status == 'ok') {
         Toast.fire({
             icon: 'success',
-            title: `Acoount credited with  $${res.funded} USD`
+            title: `Acoount upgraded by  $${res.funded} USD in profit`
         })
     }else{
       Toast.fire({
@@ -415,7 +415,8 @@ const Admindashboard = ({ route }) => {
                         </td>
                         <td>
                           <button onClick={()=>{
-                          setShowUpgradeModal(true)
+                            setShowUpgradeModal(true)
+                            setActiveEmail(refer.email)
                         }} className='manual-btn'>upgrade account</button>
                         </td>
                         <td>

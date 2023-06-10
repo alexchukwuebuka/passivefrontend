@@ -87,7 +87,7 @@ const Userdashboardplans = ({route}) => {
         duration:'12 days'
       },
   ])
-
+  
 
    // sweet alert function 
 
