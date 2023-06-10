@@ -164,6 +164,7 @@ const Admindashboard = ({ route }) => {
             icon: 'success',
             title: `Acoount upgraded by  $${res.funded} USD in profit`
         })
+      setShowUpgradeModal(false)
     }else{
       Toast.fire({
         icon: 'error',
