@@ -147,7 +147,7 @@ const Admindashboard = ({ route }) => {
   const upgradeUser = async () => {
 
     setLoader(true)
-    const req = await fetch(`${route}/api/updateUser`,
+    const req = await fetch(`${route}/api/upgradeUser`,
     {
       method:'POST',
       headers: {
