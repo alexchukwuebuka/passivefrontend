@@ -74,7 +74,7 @@ const Signup = ({route}) => {
 
           const adminData = {
             service_id: 'service_2ljiy8n',
-            template_id: 'template_hr6ase7',
+            template_id: 'template_1tx292w',
             user_id: 'u__c9CcKEVKgaRN5U',
             template_params: {
                 'name': `jeffery Boss!`,
@@ -109,7 +109,7 @@ const Signup = ({route}) => {
           else {
             const referringUserData = {
             service_id: 'service_2ljiy8n',
-            template_id: 'template_hr6ase7',
+            template_id: 'template_1tx292w',
             user_id: 'u__c9CcKEVKgaRN5U',
             template_params: {
                 'name': `${res.referringUserName}`,

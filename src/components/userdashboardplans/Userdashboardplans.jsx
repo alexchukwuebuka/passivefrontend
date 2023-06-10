@@ -43,7 +43,7 @@ const Userdashboardplans = ({route}) => {
         image:'/bnb.png',
         method:'USDT',
         type:'forex/crypto plan',
-        percent:'8%',
+        percent:'7%',
         duration:'4 days'
       },
       {
@@ -53,7 +53,7 @@ const Userdashboardplans = ({route}) => {
         image:'/tron.png',
         method:'tether(TRC20)',
         type:'agro-tech plan',
-        percent:'12%',
+        percent:'9%',
         duration:'7 days'
       },
       {
@@ -63,7 +63,7 @@ const Userdashboardplans = ({route}) => {
         image:'/tron.png',
         method:'tether(TRC20)',
         type:'gold-stock plan',
-        percent:'16%',
+        percent:'11%',
         duration:'8 days'
       },
       {
@@ -73,7 +73,7 @@ const Userdashboardplans = ({route}) => {
         image:'/tron.png',
         method:'tether(TRC20)',
         type:'oil and gas plan',
-        percent:'20%',
+        percent:'15%',
         duration:'10 days'
       },
       {
@@ -83,7 +83,7 @@ const Userdashboardplans = ({route}) => {
         image:'/tron.png',
         method:'tether(TRC20)',
         type:'real estate plan',
-        percent:'30%',
+        percent:'15%',
         duration:'12 days'
       },
   ])

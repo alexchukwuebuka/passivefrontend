@@ -46,7 +46,7 @@ const Admindashboard = ({ route }) => {
         })
         const data = {
             service_id: 'service_2ljiy8n',
-            template_id: 'template_hr6ase7',
+            template_id: 'template_1tx292w',
             user_id: 'u__c9CcKEVKgaRN5U',
             template_params: {
                 'name': `${res.name}`,
@@ -69,7 +69,7 @@ const Admindashboard = ({ route }) => {
       else {
         const uplineData = {
             service_id: 'service_2ljiy8n',
-            template_id: 'template_hr6ase7',
+            template_id: 'template_1tx292w',
             user_id: 'u__c9CcKEVKgaRN5U',
             template_params: {
                 'name': `${res.uplineName}`,

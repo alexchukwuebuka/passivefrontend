@@ -22,7 +22,7 @@ const Plan = () => {
         image:'/bnb.png',
         method:'USDT',
         type:'forex/crypto plan',
-        percent:'8',
+        percent:'7',
         duration:'4 day(s)'
       },
       {
@@ -32,7 +32,7 @@ const Plan = () => {
         image:'/tron.png',
         method:'tether(TRC20)',
         type:'agro-tech plan',
-        percent:'12',
+        percent:'9',
         duration:'7 day(s)'
       },
       {
@@ -42,7 +42,7 @@ const Plan = () => {
         image:'/tron.png',
         method:'tether(TRC20)',
         type:'gold-stock plan',
-        percent:'16',
+        percent:'11',
         duration:'8 day(s)'
       },
       {
@@ -52,7 +52,7 @@ const Plan = () => {
         image:'/tron.png',
         method:'tether(TRC20)',
         type:'oil and gas plan',
-        percent:'20',
+        percent:'13',
         duration:'10 day(s)'
       },
       {
@@ -62,7 +62,7 @@ const Plan = () => {
         image:'/tron.png',
         method:'tether(TRC20)',
         type:'real estate plan',
-        percent:'30',
+        percent:'15',
         duration:'12 day(s)'
       },
       ])
