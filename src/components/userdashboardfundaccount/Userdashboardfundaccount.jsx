@@ -89,7 +89,7 @@ const Userdashboardfundaccount = ({route}) => {
               <MdClose className='close-modal-btn' onClick={()=>{setShowModal(false)}}/>
                 <div className="modal-input-container">
                   <div className="modal-input">
-                    <input type="text" placeholder='0.00' onChange={(e)=>{
+                    <input type="tel" placeholder='0.00' onChange={(e)=>{
                       setDepositAmount(parseInt(e.target.value))
                     }}/>
                     <span>USD</span>

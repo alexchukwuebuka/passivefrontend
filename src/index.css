@@ -7,6 +7,15 @@
   list-style: none;
   font-family: Open Sans,'Lato','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+.ping-container{
+  min-width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  background-color: white;
+  position: absolute;
+}
 .whatsapp-icon{
   position: fixed;
   right: 40px;

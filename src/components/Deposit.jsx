@@ -196,10 +196,10 @@ const Deposit = ({amount,active,close,route}) => {
                         <p>upload proof of payment</p>
                           <div className="proof-img-container">
                               {
-                                  modal && <Loader />
+                                  modal && <div className="ping-container"><div class="ping"></div></div> 
                               }
                             {
-                                showImage === undefined &&  !modal ? <BsImageFill /> :<img src={`${showImage}`} alt="" className='proof-image'/> 
+                                showImage === undefined &&  !modal ? <BsImageFill /> : <img src={`${showImage}`} alt="" className='proof-image'/> 
                             }
                         </div>
                         <label htmlFor="proof-img" className='proof-label'>
