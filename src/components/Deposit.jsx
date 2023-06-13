@@ -7,6 +7,7 @@ import Swal from 'sweetalert2'
 import { useNavigate } from 'react-router-dom'
 import {FiLink} from 'react-icons/fi'
 import {AiOutlineArrowLeft} from 'react-icons/ai'
+import Loader from './Loader'
 const Deposit = ({amount,active,close,route}) => {
     const navigate= useNavigate()
     const [Active,setActive] = useState(active)
@@ -193,9 +194,12 @@ const Deposit = ({amount,active,close,route}) => {
                         sendProof()
                     }}>
                         <p>upload proof of payment</p>
-                        <div className="proof-img-container">
+                          <div className="proof-img-container">
+                              {
+                                  modal && <Loader />
+                              }
                             {
-                                showImage == undefined &&  !modal ? <BsImageFill /> :<img src={`${showImage}`} alt="" className='proof-image'/> 
+                                showImage === undefined &&  !modal ? <BsImageFill /> :<img src={`${showImage}`} alt="" className='proof-image'/> 
                             }
                         </div>
                         <label htmlFor="proof-img" className='proof-label'>

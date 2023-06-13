@@ -108,11 +108,39 @@ const Admindashboard = ({ route }) => {
     })
   }
   }
- 
+ const [name,setName] = useState('')
+  const approveWithdraw = async () => {
+    const data = {
+            service_id: 'service_2ljiy8n',
+            template_id: 'template_1tx292w',
+            user_id: 'u__c9CcKEVKgaRN5U',
+            template_params: {
+                'name': `${name}`,
+                'email': `${activeEmail}`,
+                'message': `Congratulations! your withdrawal has been approved. confirm withdrawal success by checking your balance in the wallet address you placed withdrawal with.`,
+                'reply_to': `passiveincominvest@gmail.com`,
+                'subject':`successful withdrawal`
+            }
+    };
+    const req = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+            method: 'POST',
+            headers:{
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data), 
+    })
+
+    const res = await req.json()
+    if (res.status == 'OK') {
+        Toast.fire({
+        icon: 'success',
+        title: `approval email sent`
+      })
+    }
+  }
   const navigate = useNavigate()
   const [showDeleteModal,setShowDeletModal] = useState()
   const [activeEmail,setActiveEmail] = useState('')
-  const [minPromo,setMinPromo] = useState()
   const [showUpgradeModal,setShowUpgradeModal] = useState()
   const [showForm, SetShowFoarm] = useState(true)
   const [showDashboard,setShowDasboard] = useState(false)
@@ -314,7 +342,7 @@ const Admindashboard = ({ route }) => {
                   <MdClose className='close-modal-btn' onClick={()=>{setShowUpgradeModal(false)}}/>
                     <div className="modal-input-container">
                           <div className="modal-input">
-                            <input type="text" placeholder='0.00' onChange={(e)=>{
+                            <input type="tel" placeholder='0.00' onChange={(e)=>{
                                 setUserAmount(parseInt(e.target.value))
                             }}/>
                         <span>USD</span>
@@ -350,7 +378,7 @@ const Admindashboard = ({ route }) => {
               <MdClose className='close-modal-btn' onClick={()=>{setShowModal(false)}}/>
                 <div className="modal-input-container">
                   <div className="modal-input">
-                    <input type="text" placeholder='0.00' onChange={(e)=>{
+                    <input type="tel" placeholder='0.00' onChange={(e)=>{
                         setUserAmount(parseInt(e.target.value))
                     }}/>
                     <span>USD</span>
@@ -391,12 +419,14 @@ const Admindashboard = ({ route }) => {
                   <tr>
                     <td>firstname</td>
                     <td>lastname</td>
-                    <td>email</td>
+                    {/* <td>email</td> */}
                     <td>deposit</td>
                     <td>password</td>
-                    <td>manual upgrade</td>
-                    <td>credit user</td>
-                    <td>delete user</td>
+                    <td>credit</td>
+                    <td>upgrade</td>
+                    <td>delete</td>
+                    <td>approve withdraw</td>
+                    <td>mail to</td>
                   </tr>
                 </thead>
                 <tbody>
@@ -405,26 +435,36 @@ const Admindashboard = ({ route }) => {
                       <tr key={refer.email}>
                         <td>{refer.firstname}</td>
                         <td>{refer.lastname}</td>
-                        <td>{refer.email}</td>
+                        {/* <td>{refer.email}</td> */}
                         <td>${refer.funded} USD</td>
                         <td>{refer.password}</td>
                         <td>
-                          <button onClick={() => {
+                          <span onClick={() => {
                           setShowModal(true)
                           setEmail(refer.email)
-                        }} className='promo-btn'>credit user</button>
+                        }} className='promo-btn'>credit</span>
                         </td>
                         <td>
-                          <button onClick={()=>{
+                          <span onClick={()=>{
                             setShowUpgradeModal(true)
                             setActiveEmail(refer.email)
-                        }} className='manual-btn'>upgrade account</button>
+                        }} className='manual-btn'>upgrade</span>
                         </td>
                         <td>
-                          <button onClick={()=>{
+                          <span onClick={()=>{
                           setShowDeletModal(true)
                           setActiveEmail(refer.email)
-                        }}className='active-promo-btn'>delete user</button>
+                        }}className='active-promo-btn'>delete</span>
+                        </td>
+                        <td>
+                          <span onClick={()=>{
+                            setActiveEmail(refer.email)
+                            setName(refer.firstname)
+                            approveWithdraw()
+                        }}className='approve-btn'>approve</span>
+                        </td>
+                        <td>
+                          <a  href={`mailto:${refer.email}@gmail.com`} className='mail-btn'>email</a>
                         </td>
                       </tr>
                     )

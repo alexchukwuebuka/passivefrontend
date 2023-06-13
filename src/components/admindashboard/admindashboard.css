@@ -70,7 +70,7 @@
     margin: 40px auto;
     width: 85%;
 }
-.promo-btn{
+.promo-btn,.manual-btn, .active-promo-btn, .approve-btn,.mail-btn{
     background-color: rgb(4, 178, 4);
     color: white !important;
     display: flex;
@@ -78,30 +78,28 @@
     justify-content: center;
     border-radius: 5px;
     cursor: pointer;
+    width: fit-content;
+    padding: 8px 12px;
+    min-width: 100px;
+    margin:  0px 4px;
+}
+.mail-btn{
+    background-color: rgb(181, 49, 242);
+}
+.approve-btn{
+    background-color: rgb(19, 195, 133);
 }
 .promo-btn:hover{
     background-color: rgb(0, 138, 39);
 }
 .manual-btn{
     background-color: rgb(4, 143, 178);
-    color: white !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    cursor: pointer;
 }
 tbody{
     overflow-x: scroll;
 }
 .active-promo-btn{
-    cursor: pointer;
     background-color: rgb(247, 45, 45);
-    color: white !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
 }
 .deactivate-card {
     overflow: hidden;
