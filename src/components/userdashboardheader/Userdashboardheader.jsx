@@ -66,7 +66,7 @@ const Userdashboardheader = ({route}) => {
                 </div>
                 <div className="dropdown-header">
                     <span className="profile-pic-container">
-                        {userData && userData.profilepicture !== '' ? <img src={userData.profilepicture} alt="" /> : userData.firstname.charAt(0)} 
+                        {userData && userData.profilepicture !== '' ? <img src={userData.profilepicture ? userData.profilepicture : ''} alt="" /> : userData.firstname.charAt(0)} 
                     </span>
                     <span className="dropdown-user-details">
                         <p className='dropdown-name'>{userData ? userData.firstname : 'john doe'}</p>

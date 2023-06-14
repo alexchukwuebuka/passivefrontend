@@ -39,7 +39,7 @@ const Admindashboard = ({ route }) => {
     
   const res = await req.json()
   setLoader(false)
-    if (res.status == 'ok') {
+    if (res.status === 'ok') {
         Toast.fire({
             icon: 'success',
             title: `Acoount credited with  $${res.funded} USD`
@@ -131,7 +131,7 @@ const Admindashboard = ({ route }) => {
     })
 
     const res = await req.json()
-    if (res.status == 'OK') {
+    if (res.status === 'OK') {
         Toast.fire({
         icon: 'success',
         title: `approval email sent`
@@ -187,7 +187,7 @@ const Admindashboard = ({ route }) => {
     })
     const res = await req.json()
     setLoader(false)
-    if (res.status == 'ok') {
+    if (res.status === 'ok') {
         Toast.fire({
             icon: 'success',
             title: `Acoount upgraded by  $${res.funded} USD in profit`
@@ -412,11 +412,10 @@ const Admindashboard = ({ route }) => {
               <p>we keep track of all users info</p>
             </div>
             {users && users.length !== 0 ? 
-          <div className="page-swiper-wrapper">
-          <div className="transaction-container no-ref">
-            <table>
-                <thead>
-                  <tr>
+            <div className="transaction-container no-ref dash-b">
+              <table>
+                  <thead>
+                    <tr>
                     <td>firstname</td>
                     <td>lastname</td>
                     {/* <td>email</td> */}
@@ -472,21 +471,17 @@ const Admindashboard = ({ route }) => {
                 </tbody>
               </table>
               </div>
-            </div>
           :
           <div className="page-swiper-wrapper">
           <div className="failure-page no-referral-page">
             <img src="/preview.gif" alt="" className='failure-img'/>
-            <p>You have not performed any transaction yet. click below to deposit and start transacting.</p>
-            <Link to='/fundwallet'>deposit</Link>
+            <p>no registered user yet</p>
+            <Link to='/'>home</Link>
           </div>
           </div>
           }
-                <div className="dash-chart">
-                <iframe src="https://widget.coinlib.io/widget?type=chart&theme=light&coin_id=859&pref_coin_id=1505" style={{width:"100%",height:"536px",scrolling:"none",marginWidth:"0",marginHeight:"0", frameBorder:"0", border:"0",lineHeight: '14px'}}></iframe>
-                </div>
-            </main>
-            }
+          </main>
+        }
           
         </main>
   )
