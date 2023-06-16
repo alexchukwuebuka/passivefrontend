@@ -48,21 +48,21 @@ const Plan = () => {
       {
         id:5,
         min:'30,001',
-        max:'50,000',
+        max:'100,000',
         image:'/tron.png',
         method:'tether(TRC20)',
         type:'oil and gas plan',
-        percent:'13',
+        percent:'15',
         duration:'10 day(s)'
       },
       {
         id:6,
-        min:'50,001',
+        min:'100,001',
         max:'1,000,000',
         image:'/tron.png',
         method:'tether(TRC20)',
         type:'real estate plan',
-        percent:'15',
+        percent:'18',
         duration:'12 day(s)'
       },
       ])

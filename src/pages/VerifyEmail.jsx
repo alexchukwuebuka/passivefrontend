@@ -8,7 +8,7 @@ const VerifyEmail = ({route}) => {
     const navigate = useNavigate()
     useEffect(() => {
                     setLoader(true)
-                const referUser = async()=>{
+                    const referUser = async()=>{
                     try {
                         const url = `${route}/${params.id}/refer`
                         const req = await fetch(url,{
@@ -18,14 +18,18 @@ const VerifyEmail = ({route}) => {
                         })
                         const res = await req.json()
                         setLoader(false)
-                        console.log(res)
-                        navigate('/signup')
-                        localStorage.setItem('referedUser',res.referredUser)
-                } catch (error) {
+                        if (res.status === 400) {
+                            navigate('/signup')
+                        }
+                        else {
+                            navigate('/signup')
+                            localStorage.setItem('referedUser',res.referredUser)
+                        }
+                    } catch (error) {
                     console.log(error)
                     setLoader(false)
-                    
-                }
+                    navigate('/signup')
+                        }
             }
             // const verifyEmailUrl = async()=>{
             //     try {

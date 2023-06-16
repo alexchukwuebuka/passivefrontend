@@ -2,7 +2,7 @@ import React from 'react'
 import { Link,useNavigate } from 'react-router-dom'
 import { FaGlobeAmericas } from 'react-icons/fa'
 import { SlPhone } from 'react-icons/sl'
-import {ImLink} from 'react-icons/im'
+import {GrUserAdmin} from 'react-icons/gr'
 import {BiUser} from 'react-icons/bi'
 import {BsEye,BsEyeSlash} from 'react-icons/bs'
 import { useState } from 'react'
@@ -13,6 +13,7 @@ const Signup = ({route}) => {
   const [showPassword, setShowPassword] =  useState(false)
   const [showConfirmPassword, setShowConfirmPassword] =  useState(false)
   const [firstname,setFirstname] = useState()
+  const [username,setUserName] = useState('')
   const [country,setCountry] = useState()
   const [lastname,setLastname] = useState()
   const [email,setEmail] = useState()
@@ -48,7 +49,8 @@ const Signup = ({route}) => {
           },
           body:JSON.stringify({
             firstName:firstname,
-            lastName:lastname,
+            lastName: lastname,
+            userName: username,
             password:password,
             email:email,
             phone: phone,
@@ -158,6 +160,7 @@ const Signup = ({route}) => {
         setPassword('')
         setCountry('')
         setPhone('')
+        setUserName('')
         localStorage.removeItem('referedUser')
         navigate('/dashboard')
       }
@@ -414,6 +417,15 @@ const Signup = ({route}) => {
               title="Inpit title"
               name="input-name"
               type="text" className="input_field" id="lastname_field" autocomplete="off" required />
+          </div>
+          <div class="input_containers">
+                <label class="input_labels" for="lastname_field">username</label>
+                <span className="icont">
+                <GrUserAdmin/>
+                </span>
+                <input onChange={(e)=>{
+                        setUserName(e.target.value.trim())
+                      }} value={username} placeholder="johnsmith" title="Inpit title" name="input-name" type="text" class="input_field" id="lastname_field" required/>
               </div>
               <div class="input_containers">
                 <label class="input_labels" for="email_field">Email</label>

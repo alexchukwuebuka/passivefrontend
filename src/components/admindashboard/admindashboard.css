@@ -191,8 +191,14 @@ tbody{
     min-height: fit-content;
     width: 90%;
     margin: auto;
+    padding-bottom:40px ;
 }
 @media screen  and (max-width:740px){
+    .dash-b {
+            min-height: 80vh;
+            width: 90%;
+            margin: auto;
+        }
     .credit-form{
         flex-direction: column;
     }

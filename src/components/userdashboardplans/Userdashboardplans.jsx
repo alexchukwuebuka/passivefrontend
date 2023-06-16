@@ -69,7 +69,7 @@ const Userdashboardplans = ({route}) => {
       {
         id:5,
         min:30001,
-        max:50000,
+        max:100000,
         image:'/tron.png',
         method:'tether(TRC20)',
         type:'oil and gas plan',
@@ -78,12 +78,12 @@ const Userdashboardplans = ({route}) => {
       },
       {
         id:6,
-        min:50001,
-        max:1000000,
+        min:1000001,
+        max:10000000,
         image:'/tron.png',
         method:'tether(TRC20)',
         type:'real estate plan',
-        percent:'15%',
+        percent:'18%',
         duration:'12 days'
       },
   ])
