@@ -101,7 +101,7 @@ const Userdashboardreferrals = ({route}) => {
             <img src="/eadb74787dda41cc6333341e55293432.gif" alt="" className='failure-img'/>
             <p>You haven't referred any user yet, click below to copy your referral linkany to earn 10% of any any deposit made by user</p>
             <div className="click-to-copy-container">
-                <input type="text" value={`https://www.passiveincomeinvest.org/user/${userData && userData.referral}/refer`} ref={clipRef}/>
+                <input type="text" value={`passiveincomeinvest.org/user/${userData && userData.referral}`} ref={clipRef}/>
                 <span className={`clipboard-btn ${clipBoard ? <MdOutlineDone /> : ''}` } onClick={()=>{
                     copy()
                     setClipBoard(!clipBoard)
