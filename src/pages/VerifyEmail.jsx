@@ -10,7 +10,7 @@ const VerifyEmail = ({route}) => {
                     setLoader(true)
                     const referUser = async()=>{
                     try {
-                        const url = `${route}/${params.id}/refer`
+                        const url = `${route}/${params.id}`
                         const req = await fetch(url,{
                             headers:{
                                 'Content-Type':'application/json'
