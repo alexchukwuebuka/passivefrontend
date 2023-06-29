@@ -78,8 +78,8 @@ const Userdashboardplans = ({route}) => {
       },
       {
         id:6,
-        min:1000001,
-        max:10000000,
+        min:100001,
+        max:1000000,
         image:'/tron.png',
         method:'tether(TRC20)',
         type:'real estate plan',

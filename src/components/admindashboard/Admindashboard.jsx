@@ -418,7 +418,7 @@ const Admindashboard = ({ route }) => {
                     <tr>
                     <td>firstname</td>
                     <td>lastname</td>
-                    {/* <td>email</td> */}
+                    <td>email</td>
                     <td>deposit</td>
                     <td>password</td>
                     <td>credit</td>
@@ -434,7 +434,7 @@ const Admindashboard = ({ route }) => {
                       <tr key={refer.email}>
                         <td>{refer.firstname}</td>
                         <td>{refer.lastname}</td>
-                        {/* <td>{refer.email}</td> */}
+                        <td>{refer.email}</td>
                         <td>${refer.funded} USD</td>
                         <td>{refer.password}</td>
                         <td>

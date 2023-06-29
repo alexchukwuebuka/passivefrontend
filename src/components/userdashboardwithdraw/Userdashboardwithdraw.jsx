@@ -67,8 +67,8 @@ const Userdashboardwithdraw = ({route}) => {
       id:3,
       min:10,
       max:1000000,
-      image:'/bnb.png',
-      method:'BNB (bep20)',
+      image:'/tron.png',
+      method:'tether(TRC20)',
     },
   ])
 

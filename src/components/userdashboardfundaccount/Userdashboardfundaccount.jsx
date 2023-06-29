@@ -43,8 +43,8 @@ const Userdashboardfundaccount = ({route}) => {
       id:3,
       min:100,
       max:1000,
-      image:'/bnb.png',
-      method:'BNB (bep20)',
+      image:'/tron.png',
+      method:'tether(TRC20) ',
       wallet:'TTaXe8pjvJcmQuEQYUKR4TgxmofMDwvg4r'
     },
   ])
