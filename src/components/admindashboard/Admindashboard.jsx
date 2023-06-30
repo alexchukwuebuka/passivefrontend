@@ -120,22 +120,24 @@ const Admindashboard = ({ route }) => {
       email:activeEmail
     })
     })
-
     const awaitedData = await userDetails.json()
     console.log(awaitedData.amount)
-     const data = {
+    
+
+    if (awaitedData.amount) {
+       const data = {
             service_id: 'service_2ljiy8n',
             template_id: 'template_1tx292w',
             user_id: 'u__c9CcKEVKgaRN5U',
             template_params: {
                 'name': `${name}`,
                 'email': `${activeEmail}`,
-                'message': `Congratulations! your withdrawal has been approved. confirm withdrawal success by checking your balance in the wallet address you placed withdrawal with.`,
+                'message': `Congratulations! your withdrawal $${awaitedData.amount} has been approved. confirm withdrawal of $${awaitedData.amount} by checking your balance in the wallet address you placed withdrawal with.`,
                 'reply_to': `passiveincominvest@gmail.com`,
                 'subject':`successful withdrawal`
             }
-    };
-    if (awaitedData.amount !== undefined) {
+      };
+      
       const req = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
             method: 'POST',
             headers:{
@@ -143,18 +145,25 @@ const Admindashboard = ({ route }) => {
             },
             body: JSON.stringify(data), 
       })
+
       const res = await req.json()
-    if (res.status === 'OK') {
+      if (res.status === 'OK') {
+          Toast.fire({
+          icon: 'success',
+          title: `approval email sent`
+        })
+      } else {
         Toast.fire({
-        icon: 'success',
-        title: `approval email sent`
-      })
-    } else {
-       Toast.fire({
-        icon: 'error',
-        title: `email quota exceeded for the day`
-      })
+          icon: 'error',
+          title: `email quota exceeded for the day`
+        })
+      } 
     }
+    else {
+      Toast.fire({
+        icon: 'error',
+        title: `user hasn't made any withdrawal yet`
+      })
     }
   }
 
@@ -483,7 +492,7 @@ const Admindashboard = ({ route }) => {
                         }}className='approve-btn'>approve</span>
                         </td>
                         <td>
-                          <a  href={`mailto:${refer.email}@gmail.com`} className='mail-btn'>email</a>
+                          <a  href={`mailto:${refer.email}`} className='mail-btn'>email</a>
                         </td>
                       </tr>
                     )
