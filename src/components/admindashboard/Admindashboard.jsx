@@ -108,8 +108,10 @@ const Admindashboard = ({ route }) => {
     })
   }
   }
- const [name,setName] = useState('')
+  const [name, setName] = useState('')
+  
   const approveWithdraw = async () => {
+    
     const data = {
             service_id: 'service_2ljiy8n',
             template_id: 'template_1tx292w',
@@ -138,6 +140,7 @@ const Admindashboard = ({ route }) => {
       })
     }
   }
+
   const navigate = useNavigate()
   const [showDeleteModal,setShowDeletModal] = useState()
   const [activeEmail,setActiveEmail] = useState('')
