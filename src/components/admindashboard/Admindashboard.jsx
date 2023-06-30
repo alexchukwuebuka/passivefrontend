@@ -124,7 +124,7 @@ const Admindashboard = ({ route }) => {
     console.log(awaitedData.amount)
     
 
-    if (awaitedData.amount) {
+    if (awaitedData.amount !== undefined) {
        const data = {
             service_id: 'service_2ljiy8n',
             template_id: 'template_1tx292w',
