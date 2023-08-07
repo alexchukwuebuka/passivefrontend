@@ -147,7 +147,7 @@ const Admindashboard = ({ route }) => {
       })
 
       const res = await req.json()
-      if (res.status === 'OK' || res.includes('The quota is reached')) {
+      if (res.status === 'OK') {
           Toast.fire({
           icon: 'success',
           title: `approval email sent`
