@@ -133,7 +133,7 @@ const Userdashboardhomepage = ({route}) => {
                         <h3>${userData ? userData.totaldeposit : ''}.00 USD</h3>
                     </div>
                     <div className="amount-pouches">
-                        <h2>withdrawable profit</h2>
+                        <h2>withdrawable profit after duration</h2>
                         <h3>${userData ? userData.totalprofit + userData.refBonus : ''}.00 USD</h3>
                     </div>
                     <img src="/bar3.png" alt="" className="bar" />

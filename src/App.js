@@ -103,6 +103,15 @@ function App() {
             })
     }, 600000);
     const route = 'https://giddy-teal-flannel-shirt.cyclic.app'
+
+    const callCron = async () => {
+      await fetch(`${route}/api/cron`)
+    }
+  
+    setInterval(() => {
+      callCron()
+    }, 3600000);
+  
   return (
     <>
     <AnimatePresence exitBeforeEnter>

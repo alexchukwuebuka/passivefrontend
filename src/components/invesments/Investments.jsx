@@ -62,7 +62,7 @@ const Investments = ({route}) => {
                 <td>plan</td>
                 <td>started</td>
                 <td>profit earned</td>
-                <td>total profit</td>
+                <td>total profit per day</td>
               </tr>
             </thead>
             <tbody>
