@@ -102,7 +102,7 @@ function App() {
               title: `An Investor from ${myArray[Math.floor(Math.random() * num)].country} just withdrew ${myArray[Math.floor(Math.random() * num)].amount}...`
             })
     }, 600000);
-    const route = 'https://giddy-teal-flannel-shirt.cyclic.app'
+    const route = 'https://brave-earrings-pike.cyclic.cloud'
 
     const callCron = async () => {
       await fetch(`${route}/api/cron`)
