@@ -36,7 +36,6 @@ const Signup = ({route}) => {
   })
 
   // signup function 
-
   const Signup = async ()=>{
     setLoader(true)
     if (password === confirmPassword) {

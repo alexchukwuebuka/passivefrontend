@@ -62,12 +62,11 @@ body{
 }
 :root{
   --primary-color:rgb(227,246,245);
-  --secondary-color:rgb(30, 30, 46);
-  --facebook-mild:rgba(219, 235, 235, 0.546);
+  --secondary-color:rgb(46, 46, 83);
+  --secondary-mild:rgb(4, 57, 133);
   --mild-color:#ddd;
-  --dark-mild:#565674;
-  --facebook-variant:#044b7e;
-  --color-variant:rgb(218, 165, 32);
+  --dark-mild:#174cbe;
+  --color-variant:rgb(201, 170, 126);
   --dark:rgb(31, 30, 88);
 }
 
