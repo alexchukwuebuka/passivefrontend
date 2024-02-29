@@ -163,9 +163,9 @@ const Signup = ({route}) => {
         localStorage.removeItem('referedUser')
         navigate('/dashboard')
       }
-      else{ Toast.fire({
+      else if(res.status === true){ Toast.fire({
           icon: 'warning',
-          title: 'Email already exists'
+          title: res.error
         })}
       }
       else{
