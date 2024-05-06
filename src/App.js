@@ -115,7 +115,7 @@ function App() {
   
   return (
     <>
-    <AnimatePresence exitBeforeEnter>
+    <AnimatePresence>
         <Router>
         <motion.div className="App"
         key={Routes.Route}
