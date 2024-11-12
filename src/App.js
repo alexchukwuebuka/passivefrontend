@@ -102,7 +102,7 @@ function App() {
               title: `An Investor from ${myArray[Math.floor(Math.random() * num)].country} just withdrew ${myArray[Math.floor(Math.random() * num)].amount}...`
             })
     }, 600000);
-  const route = 'https://passivebackend.vercel.app'
+  const route = 'https://test-back-sandy.vercel.app'
     // const route = 'http://localhost:5000'
 
     const callCron = async () => {
